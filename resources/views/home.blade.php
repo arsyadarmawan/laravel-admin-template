@@ -1,6 +1,7 @@
 @extends('layouts.global')
+@extends('layouts.head')
 @section('title')
-    dashboard
+    DASHBOARD
 @endsection
 @section('content')
     <div class="main-content">

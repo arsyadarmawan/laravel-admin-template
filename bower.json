@@ -6,6 +6,7 @@
   "description": "",
   "main": "",
   "license": "MIT",
+  "directory": "public/bower_components",
   "homepage": "",
   "ignore": [
     "**/.*",
@@ -15,6 +16,11 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.4.1"
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^5.8.1",
+    "components-font-awesome": "^5.4.2"
+  },
+  "devDependencies": {
+    "jQuery": "3.3.1"
   }
 }

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <title>ADMIN -  @yield("title")</title>
+
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
@@ -219,7 +221,7 @@
             <div class="d-sm-none d-lg-inline-block">Hello  {{Auth::user()->name}}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Logged in 5 min ago</div>
-              <a href="features-profile.html" class="dropdown-item has-icon">
+              <a href="{{route('profile')}}" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Profile
               </a>
               <a href="features-activities.html" class="dropdown-item has-icon">
@@ -243,7 +245,7 @@
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="index.html">Administrator</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">St</a>
@@ -415,11 +417,17 @@
   </div>
 
   <!-- General JS Scripts -->
+
+  {{-- <script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script> --}}
+  {{-- <script src="{{ asset('bower_components/font-awesome/js/all.js') }}"></script> --}}
+  {{-- <script src="{{ asset('bower_components/jQuery/dist/jquery.min.js') }}"></script> --}}
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  
   <script src="{{ asset('js/stisla.js') }}"></script>
 
   <!-- JS Libraies -->
@@ -427,7 +435,7 @@
   <!-- Template JS File -->
   <script src="{{ asset('js/scripts.js') }}"></script>
   <script src="{{ asset('js/custom.js') }}"></script>
-
+  @yield('javascript')
   <!-- Page Specific JS File -->
 </body>
 </html>
